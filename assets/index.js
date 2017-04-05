@@ -1,3 +1,6 @@
+var uid = Math.random()*100000+'a';
+uid = parseInt(uid.slice(0,5));
+
 $(document).ready(() => {
 
   $('form').on('submit', (e) => {
@@ -7,7 +10,7 @@ $(document).ready(() => {
     $.ajax({
       method: 'POST',
       url: '/send',
-      data: { message }
+      data: { message, uid }
     })
   });
 });

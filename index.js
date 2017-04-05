@@ -27,7 +27,18 @@ app.get('/dig', function (req, res) {
   res.sendFile(path.join(__dirname+'/dig.html'));
 })
 
+const messages = [];
+
 app.post('/send', function (req, res) {
+  messages.push({
+    message: req.body.message,
+    uid: req.body.uid,
+  });
+
+  if (messages.length === 15) {
+    pusher.trigger('my-channel', 'complete', messages);
+  }
+
   pusher.trigger('my-channel', 'submit', { data: req.body.message });
   res.send(':)')
 })
