@@ -2,23 +2,32 @@
 <html>
   <head>
     <title>Jurassic Lemmings</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body>
-    <h1>Jurassic Lemmings</h1>
+    <!-- <h1>Jurassic Lemmings</h1> -->
 
     <!-- this is the mobile view -->
 
-    <div id="form">
+    <div id="form" class="view">
       <!-- open text field - submit secret -->
+      <form class="form" action="index.html" method="post">
+        <input type="text" name="" value="" placeholder="Write your secret..."><input type="submit" name="" value="DIG!">
+      </form>
     </div>
 
-    <div id="lemmings">
+    <div id="lemmings" class="view">
       <!-- once submitted show lemmings-->
+      <div class="mining-area">
+        
+      </div>
     </div>
 
-    <div id="show-secret">
+    <div id="show-secret" class="view">
       <!-- once all secrets are submitted a secret is relayed back -->
+      <div class="secret">
+
+      </div>
     </div>
   </body>
 </html>
