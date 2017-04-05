@@ -54,6 +54,7 @@ input[type=submit] {
   position: absolute;
   width: 10%;
   padding-bottom: 0%;
+  transition: padding-bottom .2s;
   left: 45%;
   top: 3.25%;
   background: #333;
