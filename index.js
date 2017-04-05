@@ -35,6 +35,8 @@ app.post('/send', function (req, res) {
     uid: req.body.uid,
   });
 
+  console.log(messages.length)
+
   if (messages.length === 15) {
     pusher.trigger('my-channel', 'complete', messages);
   }
