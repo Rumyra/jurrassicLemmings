@@ -6,3 +6,42 @@
   justify-content: center;
   align-items: center;
 }
+
+.mining-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 640px;
+  width: 400px;
+  line-height: 0;
+}
+
+.mining-area div {
+  line-height: inherit;
+  height: 0;
+  width: 5%;
+  padding-bottom: 5.01%;
+  background-blend-mode: multiply;
+  background: #5f000f;
+  filter: saturate(130%);
+}
+
+.mining-area div:nth-child(-n+420) {
+  background: #ca4805;
+}
+
+.mining-area div:nth-child(-n+120) {
+  background: #930a14;
+}
+
+.mining-area div:nth-child(-n+60) {
+  background: #8eb410;
+}
+
+.mining-area div:nth-child(-n+40) {
+  background: #3e8510;
+}
+
+.mining-area div:nth-child(-n+20) {
+  background: #7e80fd;
+}
