@@ -27,8 +27,7 @@ app.get('/dig', function (req, res) {
 })
 
 app.post('/send', function (req, res) {
-  console.log(req.body)
-  // pusher.trigger('my-channel', 'submit', { data: true });
+  pusher.trigger('my-channel', 'submit', { data: 'Message' });
 })
 
 app.listen(3000, function () {
