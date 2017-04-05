@@ -28,12 +28,6 @@ channel.bind('submit', (data) => {
   holeDepth++;
   hole.setAttribute('style', `padding-bottom: ${holeDepth}0%`);
 
-  var allMessArr = [];
-  allMessArr.push(data);
-
-
-
-
 });
 
 
