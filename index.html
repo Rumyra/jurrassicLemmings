@@ -2,25 +2,43 @@
 <html>
   <head>
     <title>Jurassic Lemmings</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body>
-    <h1>Jurassic Lemmings</h1>
+    <!-- <h1>Jurassic Lemmings</h1> -->
 
     <!-- this is the mobile view -->
 
-    <div id="form">
+    <div id="form" class="view">
       <!-- open text field - submit secret -->
+      <form class="form" action="index.html" method="post">
+        <input type="text" name="" value="" placeholder="Write your secret..."><input type="submit" name="" value="DIG!">
+      </form>
     </div>
 
-    <div id="lemmings">
+    <div id="lemmings" class="view">
       <!-- once submitted show lemmings-->
+      <div class="mining-area">
+
+      </div>
     </div>
 
-    <div id="show-secret">
+    <div id="show-secret" class="view">
       <!-- once all secrets are submitted a secret is relayed back -->
-    </div>
+      <div class="secret">
 
+      </div>
+    </div>
+    <script type="text/javascript">
+      const miningArea = document.querySelector('.mining-area');
+      const block = document.createElement('div');
+      for (var i = 0; i < 640; i++) {
+        const opacity = Math.floor(Math.random() * (9 - 7)) + 7;
+        const block = document.createElement('div');
+        block.setAttribute('style', `opacity: 0.${opacity}`);
+        miningArea.appendChild(block);
+      }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="index.js"></script>
   </body>
