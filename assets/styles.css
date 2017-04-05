@@ -36,6 +36,26 @@ input[type=submit] {
   height: 640px;
   width: 400px;
   line-height: 0;
+  overflow: hidden;
+}
+
+.mining-area:before {
+  content: "";
+  background: url(https://i1.wp.com/cdn.duelinganalogs.com/wp-content/uploads/2013/05/lemmings-animated.gif);
+  background-size: cover;
+  background-blend-mode: screen;
+  background-color: #7e80fd;
+  animation: walking 16s linear infinite;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: -110%;
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes walking {
+  to { left: 110% }
 }
 
 .mining-area div {
