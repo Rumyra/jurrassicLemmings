@@ -8,6 +8,7 @@
 }
 
 .mining-area {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -23,7 +24,19 @@
   padding-bottom: 5.01%;
   background-blend-mode: multiply;
   background: #5f000f;
-  filter: saturate(130%);
+  filter: saturate(140%);
+  position: relative;
+  z-index: 1;
+}
+
+.mining-area span {
+  position: absolute;
+  width: 10%;
+  padding-bottom: 0%;
+  left: 45%;
+  top: 3.25%;
+  background: #333;
+  z-index: 2;
 }
 
 .mining-area div:nth-child(-n+420) {
