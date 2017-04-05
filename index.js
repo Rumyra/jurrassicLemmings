@@ -14,7 +14,8 @@ var pusher = new Pusher({
   encrypted: true
 });
 
-app.use( bodyParser.json() );
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use(express.static('assets'));
 
@@ -27,8 +28,8 @@ app.get('/dig', function (req, res) {
 })
 
 app.post('/send', function (req, res) {
-  console.log(req.body)
-  // pusher.trigger('my-channel', 'submit', { data: true });
+  pusher.trigger('my-channel', 'submit', { data: req.body.message });
+  res.send(':)')
 })
 
 app.listen(3000, function () {
